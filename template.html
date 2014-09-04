@@ -100,7 +100,7 @@
 
 
 
-
+        <!-- taking out Discus comments:
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 
@@ -121,6 +121,7 @@
 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
 
 <script>
 // Default language
@@ -269,10 +270,11 @@ pybossa.presentTask(function(task, deferred) {
                     deferred.resolve();
                 });
                 $("#loading").fadeIn(500);
-                if ($("#disqus_thread").is(":visible")) {
+                
+                /* if ($("#disqus_thread").is(":visible")) {
                     $('#disqus_thread').toggle();
                     $('.btn-disqus').toggle();
-                }
+                } */
             }
             else {
                 $("#error").show();
