@@ -241,6 +241,7 @@ pybossa.presentTask(function(task, deferred) {
         i18n_translate();
         $('#photo-link').html('').append(task.info.image);
         $("#photo-link").attr("href", task.info.url);
+        $("#photo-link").attr("target", "_blank");
 
         $('#task-id').html(task.id);
 
@@ -299,3 +300,6 @@ pybossa.presentTask(function(task, deferred) {
 
 pybossa.run('Tigapics'); 
 </script>
+
+
+<div id="turnip" hidden>O495B2557Y64gcy</div>
