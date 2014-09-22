@@ -224,7 +224,7 @@ pybossa.taskLoaded(function(task, deferred) {
             // continue as soon as the image is loaded
             deferred.resolve(task);
         });
-        img.attr('src', task.info.url_medium);
+        img.attr('src', 'http://tigaserver.atrapaeltigre.com/' + this_turnip + '/180374bd-ae38-4475-8fd5-edd54550cda5/medium');
         img.addClass('img-thumbnail img-responsive');
         task.info.image = img;
 	$('#q2a2').hide();
@@ -234,13 +234,14 @@ pybossa.taskLoaded(function(task, deferred) {
         deferred.resolve(task);
     }
 });
-
+  
 pybossa.presentTask(function(task, deferred) {
     if ( !$.isEmptyObject(task) ) {
         loadUserProgress();
         i18n_translate();
+		this_turnip = userLocale = document.getElementById('turnip').textContent.trim();      
         $('#photo-link').html('').append(task.info.image);
-        $("#photo-link").attr("href", task.info.url);
+        $("#photo-link").attr("href", 'http://tigaserver.atrapaeltigre.com/' + this_turnip + '/180374bd-ae38-4475-8fd5-edd54550cda5/full');
         $("#photo-link").attr("target", "_blank");
 
         $('#task-id').html(task.id);
