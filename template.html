@@ -107,7 +107,7 @@
 </div><!-- End of Skeleton Row -->
 
 
-
+div id="turnip" hidden>O495B2557Y64gcy</div>
         <!-- taking out Discus comments:
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -224,6 +224,7 @@ pybossa.taskLoaded(function(task, deferred) {
             // continue as soon as the image is loaded
             deferred.resolve(task);
         });
+        this_turnip = document.getElementById('turnip').textContent.trim();    
         img.attr('src', 'http://tigaserver.atrapaeltigre.com/' + this_turnip + '/180374bd-ae38-4475-8fd5-edd54550cda5/medium');
         img.addClass('img-thumbnail img-responsive');
         task.info.image = img;
@@ -239,7 +240,7 @@ pybossa.presentTask(function(task, deferred) {
     if ( !$.isEmptyObject(task) ) {
         loadUserProgress();
         i18n_translate();
-		this_turnip = userLocale = document.getElementById('turnip').textContent.trim();      
+	this_turnip = document.getElementById('turnip').textContent.trim();      
         $('#photo-link').html('').append(task.info.image);
         $("#photo-link").attr("href", 'http://tigaserver.atrapaeltigre.com/' + this_turnip + '/180374bd-ae38-4475-8fd5-edd54550cda5/full');
         $("#photo-link").attr("target", "_blank");
@@ -302,5 +303,3 @@ pybossa.presentTask(function(task, deferred) {
 pybossa.run('Tigapics'); 
 </script>
 
-
-<div id="turnip" hidden>O495B2557Y64gcy</div>
